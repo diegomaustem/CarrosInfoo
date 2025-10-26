@@ -32,7 +32,12 @@ async function bootstrap() {
     }),
   );
 
-  await app.listen(process.env.PORT ?? 3007);
+  // Fora do docker :::
+  // await app.listen(process.env.PORT ?? 3007);
+
+  // Dentro do docker :::
+  await app.listen(process.env.PORT ?? 3000);
+
   console.log(`API http://localhost:${process.env.PORT ?? 3007}/veiculos`);
   console.log(`Swagger http://localhost:${process.env.PORT ?? 3007}/api`);
 }
