@@ -13,6 +13,13 @@ async function bootstrap() {
     .addTag('veiculos')
     .build();
 
+  app.enableCors({
+    origin: 'http://localhost:4200',
+    methods: ['GET'],
+    allowedHeaders: ['Content-Type', 'Authorization', 'Accept'],
+    credentials: true,
+  });
+
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('api', app, document);
 
