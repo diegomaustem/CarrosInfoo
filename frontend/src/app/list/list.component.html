@@ -1,0 +1,39 @@
+<section class="cars">
+  <div class="container">
+    <div class="row">
+      <div
+        class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4"
+        *ngFor="let veiculo of veiculos"
+      >
+        <a class="card h-100">
+          <img
+            src="assets/imagens/carro.png"
+            class="card-img-top"
+            alt="Carro Padrão"
+          />
+
+          <div class="card-body">
+            <h5 class="card-title text-center">
+              {{ veiculo.marca }}
+            </h5>
+            <p class="card-text text-center">
+              {{ veiculo.modelo }}
+            </p>
+            <p class="card-text text-center desc">
+              Placa:
+              {{ veiculo.placa }}
+            </p>
+            <p class="card-text text-center desc">
+              Chassi:
+              {{ veiculo.chassi }}
+            </p>
+            <p class="card-text text-center desc">Ano: {{ veiculo.ano }}</p>
+            <div class="text-center">
+              <a class="btn btn-buy">Consultar</a>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
