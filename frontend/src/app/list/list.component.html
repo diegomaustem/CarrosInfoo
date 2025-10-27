@@ -1,6 +1,13 @@
 <section class="cars">
   <div class="container">
-    <div class="row">
+    <div *ngIf="veiculos.length === 0" class="text-center py-5">
+      <div class="empty-state">
+        <i class="fas fa-car fa-3x mb-3 empty-icon"></i>
+        <h3 class="empty-title">Nenhum veículo encontrado</h3>
+        <p class="empty-text">Não há veículos cadastrados no momento.</p>
+      </div>
+    </div>
+    <div class="row" *ngIf="veiculos.length > 0"> 
       <div
         class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4"
         *ngFor="let veiculo of veiculos"

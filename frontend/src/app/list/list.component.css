@@ -47,3 +47,29 @@ section .container .card {
 .btn-buy:hover {
   background-color: #1d222e;
 }
+
+.empty-state {
+  padding: 3rem 1rem;
+  border: 2px dashed #ddd;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.empty-icon {
+  color: #2a3042;
+  opacity: 0.7;
+}
+
+.empty-title {
+  color: #2a3042;
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.empty-text {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 16px;
+  margin-bottom: 1.5rem;
+}
